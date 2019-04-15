@@ -7,14 +7,21 @@ Este projeto demonstra como utilizar o [Protobuf](https://developers.google.com/
 
 Tem como objetivo facilitar a criação de contratos e interoperabilidade entre diferentes aplicações, sejam elas: Java e Python, entre Go e Node, entre Node e Java. O Protobuf trabalha com arquivos **.proto**, que possuem *schema* que define como será o contrato de integração. O Google resolveu disponibilizar no mercado por volta de 2008 e tem se popularizado cada vez mais, devido às suas caracteristicas, assim como sua performance quando comparado com XML e JSON. 
 
-![Alt Text](https://github.com/douglsantos/proc-apache-camel-integration-spring-boot-protobuf/raw/master/images/comparacao-protobuf-json.png)Comparativo Protobuf vs JSON - [Bruno Krebs](https://medium.com/@krebs.bruno/beating-json-performance-with-protobuf-c205397c8bc6) - Julho, 2018.
+
+<p align="center">
+  <img src="https://github.com/douglsantos/proc-apache-camel-integration-spring-boot-protobuf/raw/master/images/comparacao-protobuf-json.png">
+Comparativo Protobuf vs JSON - <a href= "https://medium.com/@krebs.bruno/beating-json-performance-with-protobuf-c205397c8bc6">Bruno Krebs</a> - Julho, 2018.
+</p>
+
 
 De forma breve, para se trabalhar com o Protobuf é necessário 3 passos:
 * Definição do contrato de forma estruturada - em um arquivo de extensão **.proto**;
 * O arquivo é compilado e o resultado é o código-fonte automaticamente gerado para a linguagem desejada, até a data desse projeto as linguagens suportadas são: C++, C#, Dart, Go, Ruby, Java, Objective-C e Python;
 * Código-fonte gerado está pronto para ser utilizado, seja para leitura ou gravação dos dados;
 
-![Alt Text](https://github.com/douglsantos/proc-apache-camel-integration-spring-boot-protobuf/raw/master/images/fluxo-protobuf.png)
+<p align="center">
+  <img src="https://github.com/douglsantos/proc-apache-camel-integration-spring-boot-protobuf/raw/master/images/fluxo-protobuf.png">
+</p>
 
 Sempre que houver alguma alteração do contrato - arquivo *.proto* - o ciclo se repetirá.
 
