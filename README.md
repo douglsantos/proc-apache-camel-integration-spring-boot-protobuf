@@ -3,9 +3,11 @@
 Este projeto demonstra como utilizar o [Protobuf](https://developers.google.com/protocol-buffers/) para realizar a integração entre duas aplicações, como demonstração foram criadas utilizando a linaguagem Java, sendo a primeira com [Apache Camel](https://camel.apache.org/) e a segunda com [Spring Boot](https://spring.io/projects/spring-boot).
 
 #### O que é Protobuf?
-É um protocolo criado pelo Google em meados de 2001, permitindo a serialização e deserialização de dados estruturados. É independente de linguagem ou plataforma.
+É um protocolo criado pelo Google em meados de 2001, permitindo a serialização e deserialização de dados estruturados. 
 
-Tem como objetivo facilitar a criação de contratos e interoperabilidade entre diferentes aplicações, sejam elas: Java e Python, entre Go e Node, entre Node e Java. O Protobuf trabalha com arquivos **.proto**, que possuem *schema* que define como será o contrato de integração. O Google resolveu disponibilizar no mercado por volta de 2008 e tem se popularizado cada vez mais, devido às suas caracteristicas, assim como sua performance quando comparado com XML e JSON. 
+Por ser independente de linguagem ou plataforma, tem como objetivo facilitar a criação de contratos e interoperabilidade entre diferentes aplicações, sejam elas: Java e Python, entre Go e Node, entre Node e Java. 
+
+O Protobuf trabalha com arquivos **.proto**, que possuem *schema* que define como será o contrato de integração. O Google resolveu disponibilizar no mercado por volta de 2008 e tem se popularizado cada vez mais, devido às suas caracteristicas, assim como sua performance quando comparado com XML e JSON. 
 
 
 <p align="center">
