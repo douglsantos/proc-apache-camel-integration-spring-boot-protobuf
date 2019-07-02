@@ -34,11 +34,24 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Para build e run das aplicações, você precisa:
+
+- [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+- [Maven 3](https://maven.apache.org)
+
+Abra um terminal de comando ou importe o projeto na sua IDE favorita, e em seguida execute os comandos descritos abaixo:
+
+- Instalar as dependências do projeto e compilar os arquivos **.proto**:
 
 ```
-Give examples
+mvn clean install
 ```
+- Execute as aplicações individualmente pelo terminal ou IDE:
+
+```
+mvn spring-boot:run
+```
+
 
 ### Installing
 
@@ -60,7 +73,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+**TODO**
 
 ### Break down into end to end tests
 
