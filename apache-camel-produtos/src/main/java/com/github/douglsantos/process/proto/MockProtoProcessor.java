@@ -9,7 +9,7 @@ import org.apache.camel.Processor;
 import com.github.douglsantos.domain.proto.PedidosProto;
 import com.github.douglsantos.domain.proto.PedidosProto.Pedidos;
 import com.github.douglsantos.domain.proto.PedidosProto.Produto;
-import com.github.douglsantos.util.constants.ProdutoConstants;
+import com.github.douglsantos.util.constant.ProdutoConstants;
 
 public class MockProtoProcessor implements Processor {
 
@@ -27,6 +27,7 @@ public class MockProtoProcessor implements Processor {
 
 			final PedidosProto.Cliente cliente = 
 					PedidosProto.Cliente.newBuilder()
+						.setClienteId(UUID.randomUUID().toString())
 						.setNome(ProdutoConstants.NOME_CLIENTE)
 					.build();
 			

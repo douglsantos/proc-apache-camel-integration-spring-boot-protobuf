@@ -1,4 +1,4 @@
-package com.github.douglsantos.util.constants;
+package com.github.douglsantos.util.constant;
 
 public class ProdutoConstants {
 	public static final int VALOR_UNITARIO = 3500;

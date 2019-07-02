@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "ff1d58dc-60b6-4b20-8f0b-2c1bfea5cdc6",
+		"name": "POC - Protobuf vs JSon",
+		"description": "Execução das chamadas passando o header: Content-Type como application/json e application/x-protobuf",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[Protobuf] Consumer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-protobuf",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:10000/produtos?quantidadePedidos=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"produtos"
+					],
+					"query": [
+						{
+							"key": "quantidadePedidos",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[JSon] Consumer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:10000/produtos?quantidadePedidos=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10000",
+					"path": [
+						"produtos"
+					],
+					"query": [
+						{
+							"key": "quantidadePedidos",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ac707536-faa5-4244-88c7-6b2383b42527",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bb1ffebe-f893-4fde-a249-e4306b8234c6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

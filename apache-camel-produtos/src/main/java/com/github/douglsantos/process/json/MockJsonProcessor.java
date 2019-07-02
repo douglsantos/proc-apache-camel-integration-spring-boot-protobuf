@@ -11,14 +11,14 @@ import org.apache.camel.Processor;
 import com.github.douglsantos.domain.Cliente;
 import com.github.douglsantos.domain.Pedido;
 import com.github.douglsantos.domain.Produto;
-import com.github.douglsantos.util.constants.ProdutoConstants;
+import com.github.douglsantos.util.constant.ProdutoConstants;
 
 public class MockJsonProcessor implements Processor {
 	
 	@Override
 	public void process(Exchange exchange) throws Exception {
 		int contentLength = exchange.getIn().getHeader("quantidadePedidos", Integer.class);
-		exchange.getIn().setHeader("Content-Type", "application/x-json");
+		exchange.getIn().setHeader("Content-Type", "application/json");
 		exchange.getIn().setBody(pedidosJson(contentLength));
 	}
 
@@ -29,6 +29,7 @@ public class MockJsonProcessor implements Processor {
 		IntStream.range(0, contentLength).forEach(iteraction -> {
 			final Cliente cliente = 
 					Cliente.builder()
+						.clienteId(UUID.randomUUID().toString())
 						.nome(ProdutoConstants.NOME_CLIENTE)
 					.build();
 

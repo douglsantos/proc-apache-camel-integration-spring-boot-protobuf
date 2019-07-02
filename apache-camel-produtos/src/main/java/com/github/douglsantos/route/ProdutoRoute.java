@@ -1,6 +1,7 @@
 package com.github.douglsantos.route;
 
 import org.apache.camel.builder.RouteBuilder;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Component;
 
 import com.github.douglsantos.process.json.MockJsonProcessor;
@@ -18,14 +19,14 @@ public class ProdutoRoute extends RouteBuilder {
 				.when(header("Content-Type").isEqualTo("application/x-protobuf"))
 					.process(new MockProtoProcessor())
 					.marshal().protobuf()
-//					.marshal().gzip()
+					.setHeader(HttpHeaders.CONTENT_TYPE, simple("application/x-protobuf"))
 					.log("${body}")
 				.when(header("Content-Type").isEqualTo("application/json"))
 					.process(new MockJsonProcessor())
-//					.marshal().json(JsonLibrary.Jackson)
-//					.marshal().gzip()
+					.setHeader(HttpHeaders.CONTENT_TYPE, simple("application/json"))
 					.log("${body}")
 				.otherwise()
+					.setBody(simple(""))
 					.log("${body}")
 			.endChoice()
 		.end();
