@@ -1,0 +1,26 @@
+syntax = "proto3";
+package com.github.douglsantos.domain.proto;
+
+option java_outer_classname = "PedidosProto";
+
+message Pedidos {
+	repeated Pedido pedidos = 1;
+}
+
+message Pedido {
+	string pedidoId = 1;
+	Cliente cliente = 2;
+	repeated Produto produto = 3;
+}
+
+message Cliente {
+	string clienteId = 1;
+	string nome = 2;
+}
+
+message Produto {
+	string produtoId = 1;
+	string descricao = 2;
+	string parceiro = 3;
+	int32 valorUnitario = 4;
+}
